@@ -3,7 +3,7 @@
 #if time lies between 0-19 minutes, no chime; if time lies 20-39 minutes, one chime; the other two chimes
 time=$(date +%M)
 count=0
-if test $time -lt 20 && test $time -ge 0; then
+if test $time -ge 0 && test $time -lt 20; then
 	echo ""
 elif test $time -ge 20 && test $time -lt 40; then
 	echo -e "\a"
